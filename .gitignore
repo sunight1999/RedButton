@@ -46,7 +46,6 @@ SourceArt/**/*.png
 SourceArt/**/*.tga
 
 # Binary Files
-Binaries/*
 Plugins/*/Binaries/*
 
 # Builds
@@ -75,3 +74,6 @@ DerivedDataCache/*
 
 # Megascan Assets
 Content/Megascans/*
+
+# Don't ignore source binary files for designers
+!Binaries/*
