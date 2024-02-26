@@ -76,4 +76,4 @@ DerivedDataCache/*
 Content/Megascans/*
 
 # Don't ignore source binary files for designers
-!Binaries/*
+!Binaries/**
