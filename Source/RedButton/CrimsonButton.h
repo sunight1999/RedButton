@@ -29,8 +29,16 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void SetMover(UMoverComponent* TargetMover);
 
+	UFUNCTION(BlueprintCallable)
+	void SetTunnelEffect(AActor* TargetTunnel);
+
+	UFUNCTION(BlueprintCallable)
+	void SetRoom(TArray<AActor*> TargetRoom);
+
 	bool TryActivateButton();
 
 private:
 	UMoverComponent* Mover = nullptr;
+	AActor* Tunnel = nullptr;
+	TArray<AActor*> Room;
 };

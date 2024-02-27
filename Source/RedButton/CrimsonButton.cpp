@@ -37,8 +37,23 @@ void UCrimsonButton::SetMover(UMoverComponent* TargetMover)
 	Mover = TargetMover;
 }
 
+void UCrimsonButton::SetTunnelEffect(AActor* TargetTunnerEffect)
+{
+	Tunnel = TargetTunnerEffect;
+}
+
+void UCrimsonButton::SetRoom(TArray<AActor*> TargetRoom)
+{
+	Room = TargetRoom;
+}
+
 bool UCrimsonButton::TryActivateButton()
 {
+	for (AActor* Wall : Room)
+	{
+		Wall->SetActorHiddenInGame(true);
+	}
+	Tunnel->SetActorEnableCollision(true);
 	Mover->SetShouldMove(true);
 	return true;
 }
