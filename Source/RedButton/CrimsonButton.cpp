@@ -50,10 +50,13 @@ void UCrimsonButton::SetRoom(TArray<AActor*> TargetRoom)
 bool UCrimsonButton::TryActivateButton()
 {
 	for (AActor* Wall : Room)
-	{
 		Wall->SetActorHiddenInGame(true);
-	}
-	Tunnel->SetActorEnableCollision(true);
-	Mover->SetShouldMove(true);
+
+	if (Tunnel)
+		Tunnel->SetActorEnableCollision(true);
+
+	if (Mover)
+		Mover->SetShouldMove(true);
+
 	return true;
 }
