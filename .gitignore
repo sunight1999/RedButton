@@ -76,7 +76,6 @@ DerivedDataCache/*
 Content/Megascans/*
 
 # Large Meshes
-Content/Mesh/*.uasset
 Content/Meshes/*
 
 # Don't ignore source binary files for designers
